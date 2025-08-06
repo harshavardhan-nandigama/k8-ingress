@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: app2
-        image: joindevops/app2:v1
+        image: harshavardhan247/app2:v1
 ---
 apiVersion: v1
 kind: Service
@@ -51,14 +51,14 @@ metadata:
   name: app2
   annotations:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:315069654700:certificate/806e53c3-3894-49ff-96c7-fbd7c3b753ff
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:607700977716:certificate/e71006fa-a4ad-4333-a41a-52e1e53971fd
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/group.name: joindevops
+    alb.ingress.kubernetes.io/group.name: harshavardhan247
 spec:
   ingressClassName: alb
   rules:
-  - host: "app2.daws84s.site"
+  - host: "app2.harshavardhan.site"
     http:
       paths:
       - pathType: Prefix
